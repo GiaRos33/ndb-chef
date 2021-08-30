@@ -25,6 +25,8 @@ default['ndb']['ip']                                  = "10.0.2.15"
 
 default['ndb']['loglevel']                            = "notice"
 default['ndb']['user']                                = node['install']['user'].empty? ? "mysql" : node['install']['user']
+default['ndb']['uid']                                 = "10040"
+default['ndb']['gid']                                 = "10041"
 default['ndb']['user-home']                           = "/home/#{node['ndb']['user']}"
 default['ndb']['group']                               = node['install']['user'].empty? ? "mysql" : node['install']['user']
 default['ndb']['connectstring']                       = ""
